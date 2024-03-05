@@ -10,6 +10,8 @@ from flair.embeddings import WordEmbeddings, FlairEmbeddings, StackedEmbeddings,
 from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
 import argparse
+import ast
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -37,6 +39,10 @@ def finetune_ner(bio_folder: str, embed_model: iter, save_folder: str, learning_
     # 4. get embed model
     '''The order of stacked embeddings SHOULD be WordEmbeddings (optional), Transformer embeddings (optional), FlairEmbeddings (required for both forward and backward models). 
     For example, ('news-forward', 'news-backward'), ('glove', 'news-forward', 'news-backward') or ('glove', 'bert-base-uncased', 'news-forward', 'news-backward').'''
+
+    if type(embed_model) == str:
+        embed_model = ast.literal_eval(embed_model)
+
     if len(embed_model) == 2:
     #while only stacking two embeddings, it has to be FlairEmbeddings
         flair_forward, flair_backward = embed_model
