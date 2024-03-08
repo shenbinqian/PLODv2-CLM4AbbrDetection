@@ -38,7 +38,7 @@ def finetune_ner(bio_folder: str, embed_model: iter, save_folder: str, learning_
 
     # 4. get embed model
     '''The order of stacked embeddings SHOULD be WordEmbeddings (optional), Transformer embeddings (optional), FlairEmbeddings (required for both forward and backward models). 
-    For example, ('news-forward', 'news-backward'), ('glove', 'news-forward', 'news-backward') or ('glove', 'bert-base-uncased', 'news-forward', 'news-backward').'''
+    For example, ('news-forward', 'news-backward'), ('glove', 'clm/cplm-pubmed-plos/forward/best-lm.pt', 'clm/cplm-pubmed-plos/backward/best-lm.pt') or ('glove', 'bert-base-uncased', 'news-forward', 'news-backward').'''
 
     if type(embed_model) == str:
         embed_model = ast.literal_eval(embed_model)
