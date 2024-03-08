@@ -13,7 +13,7 @@ import argparse
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--bio_folder", type=str, default="./PLODv2/filtered_data", help="folder to BIO data")
-    parser.add_argument("--model_path", type=str, default="./ner_base/best-model.pt", help="path to trained model")
+    parser.add_argument("--model_path", type=str, default="shenbinqian/flair-ner-pubmed-filtered", help="path to trained model")
     parser.add_argument("--pred_file", type=str, default="./predictions.tsv", help="name for the prediction file")
     parser.add_argument("--mini_batch_size", type=int, default=8, help="mini batch size")
     parser.add_argument("--num_workers", type=int, default=8, help="num workers")
@@ -22,10 +22,14 @@ def parse_args():
 
 
 def predict(bio_folder="./PLODv2/filtered_data",
-            model_path="./ner_base/best-model.pt",
+            model_path="shenbinqian/flair-ner-pubmed-filtered",
             pred_file="./predictions.tsv",
             mini_batch_size=8,
             num_workers=8):
+
+    '''bio_folder: str = folder to the BIO data
+       model_path: str = path to the trained NER model. It can be a local path (for example "./ner_pubmed_filtered/best-model.pt") or a Huggingface model name (for example "shenbinqian/flair-ner-pubmed-filtered")
+       pred_file: str = path to the prediction file'''
 
     corpus = get_bio_corpus(bio_folder)
     model = SequenceTagger.load(model_path)
