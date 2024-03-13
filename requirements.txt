@@ -1,6 +1,6 @@
 flair==0.11.3
 gensim==4.2.0
 transformers==4.20.1
-sentencepiece==0.1.97
+sentencepiece==0.1.95
 torch==1.11.0
 spacy==3.3.1
