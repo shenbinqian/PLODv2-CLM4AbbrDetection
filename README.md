@@ -58,9 +58,10 @@ No. | PLODv2-Unfiltered                                       | PLODv2-Filtered 
 
 In the table, No. 1 series models are finetuned on PLODv2 dataset using RoBERTa-large. No. 2 series models are finetuned on PLODv2 by stacking of character-level [PubMed models](https://github.com/flairNLP/flair/blob/master/resources/docs/HUNFLAIR.md). No. 3 series models are fine-tuned on PLODv2 by stacking of RoBERTa-large and our [continued pretrained character-level language models](https://github.com/shenbinqian/PLODv2-CLM4AbbrDetection/tree/main/clm/cplm-pubmed-plos) on [PLOS](https://github.com/shenbinqian/PLODv2-CLM4AbbrDetection/tree/main/PLODv1) based on PubMed models.
 
-To run (or fine-tune) Transformer models such as RoBERTa large, check our [jupyter notebooks](https://github.com/shenbinqian/PLODv2-CLM4AbbrDetection/tree/main/notebooks).
 
-Inference using our fine-tuned stacked-embedding models via flair:
+## Inference
+
+To run (or fine-tune) Transformer models such as RoBERTa large, check our [jupyter notebooks](https://github.com/shenbinqian/PLODv2-CLM4AbbrDetection/tree/main/notebooks). Inference using our fine-tuned stacked-embedding models via flair:
 
 ```
 CUDA_VISIBLE_DEVICES=0 python -m src.predict \
