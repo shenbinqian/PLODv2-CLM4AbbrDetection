@@ -7,6 +7,7 @@ This repository contains the code and PLODv2 dataset to train character-level la
 ```
 git clone https://github.com/shenbinqian/PLODv2-CLM4AbbrDetection.git
 conda create -n abbrdect python=3.9
+conda activate abbrdect
 cd PLODv2-CLM4AbbrDetection
 pip install -r requirements.txt
 ```
