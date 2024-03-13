@@ -1,5 +1,5 @@
 # PLODv2: Character-level Language Models for Abbreviation and Long-form Detection
-This repository (still under construction😊) contains the code and PLODv2 dataset to train character-level language models (CLMs) for abbreviation and long-form detection released with our LREC-COLING 2024 publication (coming soon).
+This repository contains the code and PLODv2 dataset to train character-level language models (CLMs) for abbreviation and long-form detection released with our LREC-COLING 2024 publication (coming soon).
 
 
 ## Installation
@@ -74,3 +74,5 @@ CUDA_VISIBLE_DEVICES=0 python -m src.predict \
 ## Citation
 
 Zilio, L, Qian, S., Kanojia, D. and Orasan, C., 2024. Utilizing Character-level Models for Efficient Abbreviation and Long-form Detection. Accepted by the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024). 
+
+Zilio, L., Saadany, H., Sharma, P., Kanojia, D. and Orasan, C., 2022. PLOD: An Abbreviation Detection Dataset for Scientific Documents. In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*. 
