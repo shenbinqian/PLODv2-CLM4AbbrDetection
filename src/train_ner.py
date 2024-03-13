@@ -18,7 +18,7 @@ def parse_args():
     parser.add_argument("--bio_folder", type=str, default="./PLODv2/filtered_data", help="folder to BIO data")
     parser.add_argument("--embed_model", type=str, default='("glove", "news-forward", "news-backward")', help="What model embeddings to stack, can be 2, 3, or 4 model embeddings. The order of stacked embeddings SHOULD be WordEmbeddings (optional), Transformer embeddings (optional), FlairEmbeddings (required for both forward and backward models).")
     parser.add_argument("--save_folder", type=str, default="./stacked_glove_news", help="the folder name to save the model to")
-    parser.add_argument("--learning_rate", type=float, default=0.1, help="learning rate")
+    parser.add_argument("--learning_rate", type=float, default=0.01, help="learning rate")
     parser.add_argument("--mini_batch_size", type=int, default=32, help="mini batch size")
     parser.add_argument("--max_epochs", type=int, default=150, help="max epochs")
     parser.add_argument("--use_transformer", type=str, default="False", help="whether to use Transformer embeddings while stacking 3 or 4 model embeddings")

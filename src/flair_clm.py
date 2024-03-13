@@ -20,7 +20,7 @@ def parse_args():
     parser.add_argument("--out", type=str, default="plm", help="output name")
     parser.add_argument("--hidden_size", type=int, default=2048, help="hidden size")
     parser.add_argument("--sequence_length", type=int, default=256, help="sequence length")
-    parser.add_argument("--learning_rate", type=float, default=0.1, help="learning rate")
+    parser.add_argument("--learning_rate", type=float, default=20.0, help="learning rate")
     parser.add_argument("--mini_batch_size", type=int, default=100, help="mini batch size")
     parser.add_argument("--max_epochs", type=int, default=300, help="max epochs")
     args = parser.parse_args()
