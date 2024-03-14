@@ -6,8 +6,8 @@ This repository contains the code and PLODv2 dataset to train character-level la
 
 ```
 git clone https://github.com/shenbinqian/PLODv2-CLM4AbbrDetection.git
-conda create -n abbrdect python=3.9
-conda activate abbrdect
+conda create -n abbrdet python=3.9
+conda activate abbrdet
 cd PLODv2-CLM4AbbrDetection
 pip install -r requirements.txt
 ```
@@ -45,7 +45,7 @@ CUDA_VISIBLE_DEVICES=0 python -m src.flair_clm \
 ```
 
 
-## Our models for abbreviation dection
+## Our models for abbreviation detection
 
 Our fine-tuned models for abbreviation and long form detection can be seen as follows:
 
