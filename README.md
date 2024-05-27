@@ -1,5 +1,5 @@
 # PLODv2: Character-level Language Models for Abbreviation and Long-form Detection
-This repository contains the code and PLODv2 dataset to train character-level language models (CLMs) for abbreviation and long-form detection released with our LREC-COLING 2024 publication (coming soon).
+This repository contains the code and PLODv2 dataset to train character-level language models (CLMs) for abbreviation and long-form detection released with our paper [Using character-level models for efficient abbreviation and long-form detection](https://aclanthology.org/2024.lrec-main.270/) at LREC-COLING 2024.
 
 
 ## Installation
@@ -74,6 +74,34 @@ CUDA_VISIBLE_DEVICES=0 python -m src.predict \
 
 ## Citation
 
-Zilio, L, Qian, S., Kanojia, D. and Orasan, C., 2024. Utilizing Character-level Models for Efficient Abbreviation and Long-form Detection. Accepted by the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024). 
+Zilio, L, Qian, S., Kanojia, D. and Orasan, C., 2024. Utilizing Character-level Models for Efficient Abbreviation and Long-form Detection. In *Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)*. 
 
 Zilio, L., Saadany, H., Sharma, P., Kanojia, D. and Orasan, C., 2022. PLOD: An Abbreviation Detection Dataset for Scientific Documents. In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*. 
+
+## BibTex Citation
+
+Please use the following citation while citing this work:
+
+```
+@inproceedings{zilio-etal-2024-character-level,
+    title = "Character-level Language Models for Abbreviation and Long-form Detection",
+    author = "Zilio, Leonardo  and
+      Qian, Shenbin  and
+      Kanojia, Diptesh  and
+      Orasan, Constantin",
+    editor = "Calzolari, Nicoletta  and
+      Kan, Min-Yen  and
+      Hoste, Veronique  and
+      Lenci, Alessandro  and
+      Sakti, Sakriani  and
+      Xue, Nianwen",
+    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+    month = may,
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.lrec-main.270",
+    pages = "3028--3037",
+    abstract = "Abbreviations and their associated long forms are important textual elements that are present in almost every scientific communication, and having information about these forms can help improve several NLP tasks. In this paper, our aim is to fine-tune language models for automatically identifying abbreviations and long forms. We used existing datasets which are annotated with abbreviations and long forms to train and test several language models, including transformer models, character-level language models, stacking of different embeddings, and ensemble methods. Our experiments showed that it was possible to achieve state-of-the-art results by stacking RoBERTa embeddings with domain-specific embeddings. However, the analysis of our first run showed that one of the datasets had issues in the BIO annotation, which led us to propose a revised dataset. After re-training selected models on the revised dataset, results show that character-level models achieve comparable results, especially when detecting abbreviations, but both RoBERTa large and the stacking of embeddings presented better results on biomedical data. When tested on a different subdomain (segments extracted from computer science texts), an ensemble method proved to yield the best results for the detection of long forms, and a character-level model had the best performance in detecting abbreviations.",
+}
+```
