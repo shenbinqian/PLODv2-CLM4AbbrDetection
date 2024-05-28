@@ -105,3 +105,35 @@ Please use the following citation while citing this work:
     abstract = "Abbreviations and their associated long forms are important textual elements that are present in almost every scientific communication, and having information about these forms can help improve several NLP tasks. In this paper, our aim is to fine-tune language models for automatically identifying abbreviations and long forms. We used existing datasets which are annotated with abbreviations and long forms to train and test several language models, including transformer models, character-level language models, stacking of different embeddings, and ensemble methods. Our experiments showed that it was possible to achieve state-of-the-art results by stacking RoBERTa embeddings with domain-specific embeddings. However, the analysis of our first run showed that one of the datasets had issues in the BIO annotation, which led us to propose a revised dataset. After re-training selected models on the revised dataset, results show that character-level models achieve comparable results, especially when detecting abbreviations, but both RoBERTa large and the stacking of embeddings presented better results on biomedical data. When tested on a different subdomain (segments extracted from computer science texts), an ensemble method proved to yield the best results for the detection of long forms, and a character-level model had the best performance in detecting abbreviations.",
 }
 ```
+
+```
+@inproceedings{zilio-etal-2022-plod,
+    title = "{PLOD}: An Abbreviation Detection Dataset for Scientific Documents",
+    author = "Zilio, Leonardo  and
+      Saadany, Hadeel  and
+      Sharma, Prashant  and
+      Kanojia, Diptesh  and
+      Or{\u{a}}san, Constantin",
+    editor = "Calzolari, Nicoletta  and
+      B{\'e}chet, Fr{\'e}d{\'e}ric  and
+      Blache, Philippe  and
+      Choukri, Khalid  and
+      Cieri, Christopher  and
+      Declerck, Thierry  and
+      Goggi, Sara  and
+      Isahara, Hitoshi  and
+      Maegaard, Bente  and
+      Mariani, Joseph  and
+      Mazo, H{\'e}l{\`e}ne  and
+      Odijk, Jan  and
+      Piperidis, Stelios",
+    booktitle = "Proceedings of the Thirteenth Language Resources and Evaluation Conference",
+    month = jun,
+    year = "2022",
+    address = "Marseille, France",
+    publisher = "European Language Resources Association",
+    url = "https://aclanthology.org/2022.lrec-1.71",
+    pages = "680--688",
+    abstract = "The detection and extraction of abbreviations from unstructured texts can help to improve the performance of Natural Language Processing tasks, such as machine translation and information retrieval. However, in terms of publicly available datasets, there is not enough data for training deep-neural-networks-based models to the point of generalising well over data. This paper presents PLOD, a large-scale dataset for abbreviation detection and extraction that contains 160k+ segments automatically annotated with abbreviations and their long forms. We performed manual validation over a set of instances and a complete automatic validation for this dataset. We then used it to generate several baseline models for detecting abbreviations and long forms. The best models achieved an F1-score of 0.92 for abbreviations and 0.89 for detecting their corresponding long forms. We release this dataset along with our code and all the models publicly at \url{https://github.com/surrey-nlp/PLOD-AbbreviationDetection}",
+}
+```
